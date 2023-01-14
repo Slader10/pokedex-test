@@ -1,38 +1,207 @@
-.App {
+body {
+  color: #474b4e;
+}
+
+.container {
+  max-width: 800px;
+  display: block;
+  margin: auto;
+  padding: .5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .flex {
+    display: flex;
+  }
+  .container {
+    padding: 2rem 2rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem
+}
+
+.row .col {
+  flex: calc(50% - 1rem);
+}
+
+@media (min-width: 768px) {
+  .row .col {
+    width: 100%
+  }
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 1rem;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.border-grey {
+  border-color: #c7ccd0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.input-container {
+  border-width: 2px;
+  border-radius: 5%;
+  border-style: solid;
+  max-width: 100%;
+}
+
+.input-label {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.input-container .input-text {
+  border: none;
+  padding: 5px 5px 5px 10px;
+}
+
+.form-container {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+}
+
+.input-range {
+  width: 50%;
+}
+
+.m-top {
+  margin-top: 1rem;
+}
+
+.gap-1 {
+  gap: 1rem
+}
+
+.form-control{
+  margin-bottom: 1rem;
+}
+
+button {
+  border: 1px solid #675af7;
+  border-radius: 5%;
+  background: #675af7;
   color: white;
+  font-size: 1rem;
+  padding: .5rem 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bordered {
+  border: 1px solid #c7ccd0;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .form-actions {
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .form-actions button {
+    margin-right: 1rem;
+  }
+}
+
+button:disabled {
+  background-color: #9d94ff;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.table-container table {
+  width: 100%;
+}
+
+.table-container table th,
+table td {
+  border: 1px solid #c7ccd0;
+}
+
+.input-group{
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.addButton{
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .addButton{
+    margin-top: 0;
+  }
+}
+
+.order-1{
+  order: 1;
+}
+
+.order-2{
+  order: 2;
+}
+
+.order-3{
+  order: 3;
+}
+
+.order-4{
+  order: 4;
+}
+
+@media (min-width: 768px) {
+  .order-mb-1{
+    order: 1;
+  }
+  
+  .order-mb-2{
+    order: 2;
+  }
+  
+  .order-mb-3{
+    order: 3;
+  }
+  
+  .order-mb-4{
+    order: 4;
   }
 }

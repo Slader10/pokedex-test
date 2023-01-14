@@ -1,24 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TextInput from './components/inputs/TextInput';
+import Button from './components/inputs/Button';
+import PokemonForm from './components/pokemonForm/PokemonFormContainer';
+import PokemonList from './components/pokemonList/PokemonListContainer';
 
 function App() {
+  const [filter, setFilter] = useState<string>("")
+  const handleNewPokemon = () => {
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1 className='title'>Listado de Pokemon</h1>
+      <div className='flex justify-between'>
+        <TextInput hideLabel={true}
+          label='Buscar'
+          onChange={x => setFilter(x)}
+        />
+        <Button className="addButton" onClick={handleNewPokemon}>Nuevo</Button>
+      </div>
+      <PokemonList />
+      <PokemonForm />
     </div>
   );
 }
